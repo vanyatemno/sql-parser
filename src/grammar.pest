@@ -1,0 +1,8 @@
+WHITESPACE = _{ " " | "\t" | "\n" }
+select_stmt = { "SELECT" ~ columns ~ "FROM" ~ table ~ EOI }
+columns = { identifier ~ ("," ~ identifier)* }
+table = { identifier }
+identifier = _{ unquoted_identifier | quoted_identifier }
+
+unquoted_identifier = @{ (ASCII_ALPHANUMERIC | "_" | "-")+ }
+quoted_identifier = @{ "\"" ~ (ASCII_ALPHANUMERIC | "_" | "-" | " ")* ~ "\"" }

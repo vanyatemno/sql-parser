@@ -1,0 +1,10 @@
+[package]
+name = "sql_parser_project"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "SQL parser which parses SQL statements to struct Query, with specified used fields, tables and conditions"
+
+[dependencies]
+pest = "2.7.14"
+pest_derive = "2.7.14"
