@@ -3,7 +3,7 @@ name = "sql_parser_project"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-description = "SQL parser which parses SQL statements to struct Query, with specified used fields, tables and conditions"
+description = "This is a simple project to parse SQL queries using pest crate. Currently parser supports simple select queries whith where conditions."
 
 [dependencies]
 pest = "2.7.14"

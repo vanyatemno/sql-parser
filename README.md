@@ -22,6 +22,8 @@ There are main grammar rules used:
 - `where_clause`: Parses the `WHERE CONDITION` part of statement.
 - `identifier`: Parses the name of a column or table.
 
+<img src="./diagram.png">
+
 ## Example Usage
 
 ```
