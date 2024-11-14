@@ -24,6 +24,11 @@ There are main grammar rules used:
 
 <img src="./diagram.png">
 
+## Links
+[docs](https://docs.rs/sql_query_parser/latest/sql_query_parser/)
+
+[crate](https://crates.io/crates/sql_parser_project)
+
 ## Example Usage
 
 ```
