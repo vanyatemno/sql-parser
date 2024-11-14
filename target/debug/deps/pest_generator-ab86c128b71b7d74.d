@@ -1,0 +1,11 @@
+/Users/ivan/Desktop/rust/parser/sql-parser/target/debug/deps/libpest_generator-ab86c128b71b7d74.rmeta: /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/lib.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/macros.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/docs.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/generator.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/parse_derive.rs
+
+/Users/ivan/Desktop/rust/parser/sql-parser/target/debug/deps/libpest_generator-ab86c128b71b7d74.rlib: /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/lib.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/macros.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/docs.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/generator.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/parse_derive.rs
+
+/Users/ivan/Desktop/rust/parser/sql-parser/target/debug/deps/pest_generator-ab86c128b71b7d74.d: /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/lib.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/macros.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/docs.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/generator.rs /Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/parse_derive.rs
+
+/Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/lib.rs:
+/Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/macros.rs:
+/Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/docs.rs:
+/Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/generator.rs:
+/Users/ivan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/parse_derive.rs:

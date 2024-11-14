@@ -1,7 +1,7 @@
-# SQL Query Parser
+# SQL Parser Project
 
 This is a simple project to parse SQL queries using `pest` crate.\
-Currently parser supports simple `select` queries.
+Currently parser supports simple `select` queries whith where conditions.
 
 ## Project Description
 
@@ -9,28 +9,37 @@ The `SQL Query Parser` extracts from a basic SQL query:
 - **Table Name**: The table from which data is selected.
 - **Columns**: List of columns specified in the query.
 
-## Parsing Process
+## Technical overview
 
-The parser uses the following grammar to interpret SQL syntax:
-- `select_stmt`: Matches the full SQL `SELECT` statement.
+Created parser processes PSQL-like `select` statements with multiple columns selections and where statements.
+Column and table names have to be encased in double quotes, while string values have to be encased in single quotes.
+Reserved keywords have to 
+
+There are main grammar rules used:
+- `query`: Matches the full SQL `SELECT` statement.
 - `columns`: Parses a comma-separated list of columns.
-- `table`: Parses the table name.
+- `from_clause`: Parses the `FROM TABLE` part of statement.
+- `where_clause`: Parses the `WHERE CONDITION` part of statement.
 - `identifier`: Parses the name of a column or table.
 
 ## Example Usage
 
-```rust
-use sql_parser_project::parse_query;
-
-fn main() {
-    let query_str = "SELECT column1, column2 FROM my_table";
-    let parsed_query = parse_query(query_str).unwrap();
-
-    assert_eq!(parsed_query.table, "my_table");
-    assert_eq!(parsed_query.columns, vec!["column1", "column2"]);
-}
+```
+cargo run test-query.txt
 ```
 
-## Future improvements
-- `WHERE` statement (operators >, <, =, &&, IN etc.)
-- `LEFT JOIN` support
+## Example query
+```postgresql
+SELECT "column1" FROM "table" WHERE "column1" = 5 AND "column2" = 'value';
+```
+
+## Example output
+```
+Selected table: "table"
+Selected columns: "column1"
+Conditions:
+  Column: "column1", Operator: =, Value: 5
+   AND 
+  Column: "column2", Operator: =, Value: 'value'
+
+```

@@ -1,8 +1,31 @@
 WHITESPACE = _{ " " | "\t" | "\n" }
-select_stmt = { "SELECT" ~ columns ~ "FROM" ~ table ~ EOI }
-columns = { identifier ~ ("," ~ identifier)* }
-table = { identifier }
-identifier = _{ unquoted_identifier | quoted_identifier }
 
-unquoted_identifier = @{ (ASCII_ALPHANUMERIC | "_" | "-")+ }
-quoted_identifier = @{ "\"" ~ (ASCII_ALPHANUMERIC | "_" | "-" | " ")* ~ "\"" }
+// Fixed keywords use in SQL statements
+fixed_grammar = { "SELECT" | "FROM" | "WHERE" }
+// Fixed comparison operators
+operator = {">" | "<" | ">=" | "<=" | "=" | "!=" | "&&" | "@>" | "<@" }
+// Fixed logic operators placed between where conditions
+logical_exp = { "OR" | "AND" }
+
+// Pattern which describes allowed symbols for table or column naming
+table_column_name = @{ !fixed_grammar ~ ASCII_ALPHA ~ (ASCII_ALPHANUMERIC | "-" | "_")* }
+// Pattern which matches table or column identifier
+identifier = @{"\"" ~ table_column_name ~ "\""}
+
+// Pattern which matches any number
+number = @{ ASCII_DIGIT+ }
+// Pattern which matches any string value
+string =  { "\'" ~ (!"\'" ~ ANY)* ~ "\'" }
+
+// Pattern which matches whole query
+query = { "SELECT" ~  columns ~ from_clause ~ (where_clause)? ~ ";" }
+
+// Pattern which matches selected columns identifiers
+columns = { identifier ~ ("," ~ identifier)* }
+// Pattern which matched "FROM TABLE" part of select statement
+from_clause = { "FROM" ~ identifier }
+
+// Pattern which matches single condition in where clause
+where_condition = { identifier ~ operator ~ (number | string) }
+// Pattern which matches "WHERE CONDITION1, CONDITION2..." part of select statement
+where_clause = { "WHERE" ~ where_condition ~ (logical_exp ~ where_condition)* }
